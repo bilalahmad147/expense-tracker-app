@@ -8,6 +8,7 @@ function CountContext() {
 
     return (
         <div>
+            <h1>this counter is using Context </h1>
             <h1>Counter : {Count}</h1>
             <button onClick={()=> setCount(++Count)}>Plus</button>
             <button onClick={()=> setCount(--Count)}>Minus</button>
