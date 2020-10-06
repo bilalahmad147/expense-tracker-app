@@ -1,11 +1,18 @@
 import React from 'react';
 import './App.css';
+import CountContext from './CountContext';
+import CounterContext from './CounterContext';
 
 function App() {
+
+  let initValue = 0;
+
   return (
-    <div className="App">
-      <h1>hello world from bilal ahmad</h1>
-    </div>
+    <CounterContext.Provider value={initValue}>
+      <div className="App">
+        <CountContext />
+      </div>
+    </CounterContext.Provider>
   );
 }
 
