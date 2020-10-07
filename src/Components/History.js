@@ -1,11 +1,14 @@
 import React from 'react'
+import '../App.css'
 
 function History() {
     return (
         <div>
-            <h1>History</h1>
-            <h3>Books  200$</h3>
-            <h3>Books  200$</h3>
+            <h2>History</h2>
+            <ul className="list">
+                <li><h5>Books</h5> <h5>50</h5>  </li>
+                <li><h5>Books</h5> <h5>50</h5>  </li>
+            </ul>
         </div>
     )
 }

@@ -1,10 +1,17 @@
 import React from 'react'
+import '../App.css'
 
 function BalanceDetail() {
     return (
-        <div>
-            <h2>Balance Expense <br />  200$  100$  </h2>
-            <h2></h2>
+        <div className="expenseDetail">
+            <div>
+                <h4>Income</h4>
+                <p>500$</p>
+            </div>
+            <div>
+                <h4>Expense</h4>
+                <p>400$</p>
+            </div>
         </div>
     )
 }

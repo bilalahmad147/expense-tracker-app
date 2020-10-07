@@ -1,9 +1,10 @@
 import React from 'react'
+import '../App.css'
 
 function Header() {
     return (
         <div>
-            <h1>Expense Tracker App</h1>
+            <h3>Expense Tracker App</h3>
         </div>
     )
 }
