@@ -1,13 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import '../App.css'
+import TransContext from './TransContext'
 
 function History() {
+
+    let { transaction } = useContext(TransContext);
+
     return (
-        <div>
-            <h2>History</h2>
+        <div className="history">
+            <h2>History</h2><hr />
             <ul className="list">
-                <li><h5>Books</h5> <h5>50</h5>  </li>
-                <li><h5>Books</h5> <h5>50</h5>  </li>
+                {
+                    transaction.map((obj, ind) => {
+                        return (
+                            <li key={ind}>
+                                <span>{obj.name}</span>
+                                <span>{obj.amount}$</span>
+                            </li>
+                        )
+                    })
+                }
             </ul>
         </div>
     )

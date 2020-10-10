@@ -1,16 +1,25 @@
 .App {
   margin: 0 auto;
   width: 350px;
+  border: 2px solid black;
+  padding: 20px;
+}
+.header{
+  text-align: center;
 }
 .expenseDetail{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0;
+}
+.list{
+  margin: 0;
+  padding: 0;
 }
 .list li{
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  list-style-type: none;
 }
 
 .inputForm{

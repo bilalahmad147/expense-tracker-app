@@ -3,7 +3,7 @@ import '../App.css'
 
 function Header() {
     return (
-        <div>
+        <div className="header">
             <h3>Expense Tracker App</h3>
         </div>
     )

@@ -5,10 +5,12 @@ import Balance from './Components/Balance';
 import BalanceDetail from './Components/BalanceDetail';
 import Header from './Components/Header';
 import History from './Components/History';
+import { TransProvider } from './Components/TransContext';
 
 function App() {
 
   return (
+    <TransProvider>
       <div className="App">
         <Header />
         <Balance />
@@ -16,6 +18,7 @@ function App() {
         <History />
         <AddTransaction />
       </div>
+    </TransProvider>
   );
 }
 
