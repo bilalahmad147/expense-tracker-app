@@ -1,18 +1,53 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import TransContext from "./TransContext"
 import '../App.css'
 
 function BalanceDetail() {
+
+    let { transaction } = useContext(TransContext);
+    console.log(transaction)
+
+    const getIncome = () => {
+        let income = 0;
+        for (var i = 0; i < transaction.length; i++) {
+            if (transaction[i].amount > 0)
+                income = income + Number(transaction[i].amount)
+        }
+        return income;
+    }
+
+    const getExpense = () => {
+        let expense = 0;
+        for (var i = 0; i < transaction.length; i++) {
+            if (transaction[i].amount < 0)
+                expense = expense + Number(transaction[i].amount)
+        }
+        return expense;
+    }
+
+    let yourExpense = getExpense();
+    let yourIncome = getIncome();
+    let totalBalance = yourIncome + yourExpense;
+    console.log(yourIncome,yourExpense)
+
+    console.log(yourIncome, yourExpense)
+
     return (
-        <div className="expenseDetail">
+        <React.Fragment>
             <div>
-                <h4>Income</h4>
-                <p>500$</p>
+                <h2>Your Balance <br /> {totalBalance}  </h2>
             </div>
-            <div>
-                <h4>Expense</h4>
-                <p>400$</p>
+            <div className="expenseDetail">
+                <div>
+                    <h4>Income</h4>
+                    <p>{yourIncome}$</p>
+                </div>
+                <div>
+                    <h4>Expense</h4>
+                    <p>{yourExpense}$</p>
+                </div>
             </div>
-        </div>
+        </React.Fragment>
     )
 }
 
