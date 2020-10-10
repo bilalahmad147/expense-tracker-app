@@ -7,7 +7,7 @@ function AddTransaction() {
     let { addTransaction } = useContext(TransContext)
 
     let [newName, setText] = useState('');
-    let [newAmount, setAmount] = useState(0);
+    let [newAmount, setAmount] = useState('');
 
     const handleAddition = e => {
         e.preventDefault();
@@ -15,6 +15,8 @@ function AddTransaction() {
             name: newName,
             amount: newAmount,
         })
+        setText('')
+        setAmount('')
     }
 
     return (

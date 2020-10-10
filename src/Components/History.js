@@ -1,10 +1,18 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import '../App.css'
 import TransContext from './TransContext'
 
 function History() {
 
     let { transaction } = useContext(TransContext);
+    let [state,setState] = useState(transaction);
+    console.log(state)
+    
+
+    const handleClick = (index) => {
+        setState(transaction.splice(index,1))
+        return transaction
+    }
 
     return (
         <div className="history">
@@ -16,6 +24,7 @@ function History() {
                             <li key={ind}>
                                 <span>{obj.name}</span>
                                 <span>{obj.amount}$</span>
+                                <button onClick={()=>{handleClick(ind)}}>Del</button>
                             </li>
                         )
                     })

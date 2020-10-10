@@ -5,7 +5,6 @@ import '../App.css'
 function BalanceDetail() {
 
     let { transaction } = useContext(TransContext);
-    console.log(transaction)
 
     const getIncome = () => {
         let income = 0;
@@ -28,14 +27,11 @@ function BalanceDetail() {
     let yourExpense = getExpense();
     let yourIncome = getIncome();
     let totalBalance = yourIncome + yourExpense;
-    console.log(yourIncome,yourExpense)
-
-    console.log(yourIncome, yourExpense)
 
     return (
         <React.Fragment>
             <div>
-                <h2>Your Balance <br /> {totalBalance}  </h2>
+                <h2>Your Balance <br /> {totalBalance}$  </h2>
             </div>
             <div className="expenseDetail">
                 <div>

@@ -2,9 +2,9 @@ import React,{ createContext, useReducer } from 'react';
 import TransReducer from './TransReducer';
 
 let initTransactions = [
-    { name: 'books', amount: -100 },
-    { name: 'camera', amount: -50 },
-    { name: 'salery', amount: 500 },
+    {name:"books", amount: 50},
+    {name:"camera", amount: 100},
+    {name:"salary", amount: 200},
 ]
 
 
